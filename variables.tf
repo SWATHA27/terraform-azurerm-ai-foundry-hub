@@ -18,7 +18,7 @@ variable "keyvault_name" {
 variable "account_kind" {
   description = "Defines the Kind of account. Valid options are BlobStorage, BlockBlobStorage, FileStorage, Storage and StorageV2. Defaults to StorageV2."
   type        = string
-  default = "StorageV2"
+  default     = "StorageV2"
 
 }
 variable "account_tier" {
@@ -64,9 +64,9 @@ variable "public_network_access_enabled" {
 
 }
 variable "enable_https_traffic_only" {
-  type = bool
+  type    = bool
   default = true
-  
+
 }
 
 

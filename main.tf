@@ -4,13 +4,13 @@ data "azurerm_key_vault" "example" {
 }
 
 resource "azurerm_ai_foundry" "ai_foundry" {
-  name                    = var.name
-  resource_group_name     = var.resource_group_name
-  location                = var.location
-  key_vault_id            = data.azurerm_key_vault.example.id
-  storage_account_id      = azurerm_storage_account.example.id
+  name                = var.name
+  resource_group_name = var.resource_group_name
+  location            = var.location
+  key_vault_id        = data.azurerm_key_vault.example.id
+  storage_account_id  = azurerm_storage_account.example.id
 
-    depends_on = [azurerm_storage_account.example]
+  depends_on = [azurerm_storage_account.example]
 
   identity {
     type = "SystemAssigned"
